@@ -9,8 +9,8 @@ target 'HTEffectDemoiOS' do
   # Pods for HTEffectDemoiOS
 
   # Masonry
-  pod 'Masonry'
+#  pod 'Masonry'
   # SSZipArchive
-  pod 'SSZipArchive'
+#  pod 'SSZipArchive'
   
 end

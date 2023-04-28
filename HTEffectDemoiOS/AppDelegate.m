@@ -23,7 +23,7 @@ NSString *isSDKInit = @"未初始化";
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
     [self.window makeKeyAndVisible];
-    #error----在线鉴权密钥
+//    #error----在线鉴权密钥
     [[HTEffect shareInstance] initHTEffect:@"Your AppId" withDelegate:self];
     return YES;
 }
