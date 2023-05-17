@@ -1,0 +1,3 @@
+[submodule "HTEffectDemoiOS/HTEffect"]
+	path = HTEffectDemoiOS/HTEffect
+	url = https://gitee.com/htai-open/hteffect_ios.git
