@@ -60,7 +60,7 @@
     self.isRenderInit = false;
 }
 
-// MARK: --TiUIManagerDelegate Delegate--
+// MARK: --HTUIManagerDelegate Delegate--
 - (void)didClickCameraCaptureButton{
     //拍照
     [self takePhoto];
