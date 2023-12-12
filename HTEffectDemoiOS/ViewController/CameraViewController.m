@@ -155,7 +155,7 @@
         [alertView setMessage:[NSString stringWithFormat:@"拍照失败，原因：%@", error]];
         NSLog(@"save failed.");
     } else {
-        [alertView setMessage:[NSString stringWithFormat:@"TiFancy已为您保存到相册！"]];
+        [alertView setMessage:[NSString stringWithFormat:@"已为您保存到相册！"]];
         NSLog(@"save success.");
     }
     [self presentViewController:alertView animated:NO completion:nil];
