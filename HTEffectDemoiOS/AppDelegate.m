@@ -3,7 +3,7 @@
 //  HTEffectDemoiOS
 //
 //  Created by Paul on 2019/8/23.
-//  Copyright © 2020 Tillusory Tech. All rights reserved.
+//  Copyright © 2020 Texeljoy Tech. All rights reserved.
 //
 
 #import "AppDelegate.h"

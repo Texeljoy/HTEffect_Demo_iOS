@@ -3,15 +3,17 @@
 //  HTEffectDemoiOS
 //
 //  Created by N17 on 2022/5/6.
-//  Copyright © 2022 Tillusory Tech. All rights reserved.
+//  Copyright © 2022 Texeljoy Tech. All rights reserved.
 //
 
 #import "CameraViewController.h"
 #import "HTCaptureSessionManager.h"
 #import "AppDelegate.h"
 
+//todo --- hteffect start ---
 #import <HTEffect/HTEffect.h>
 #import "HTUIManager.h"
+//todo --- hteffect end ---
 #import <HTEffect/HTEffectView.h>
 
 @interface CameraViewController () <HTUIManagerDelegate,HTEffectDelegate,HTCaptureSessionManagerDelegate>
@@ -46,11 +48,14 @@
         make.width.height.equalTo(self.view);
     }];
     
+    //todo --- hteffect start ---
     if ([isSDKInit  isEqual: @"初始化失败"]) {
         [[HTEffect shareInstance] initHTEffect:@"Your AppId" withDelegate:self];
     }
     [[HTCaptureSessionManager shareManager] startAVCaptureDelegate:self];
     [[HTUIManager shareManager] loadToWindowDelegate:self];
+    //todo --- hteffect end ---
+    
     [self.view addSubview:[HTUIManager shareManager].defaultButton];
 }
 
@@ -82,6 +87,7 @@
     CVPixelBufferLockBaseAddress(pixelBuffer, 0);
     unsigned char *baseAddress = (unsigned char *)CVPixelBufferGetBaseAddressOfPlane(pixelBuffer, 0);
     
+    //todo --- hteffect start ---
     // 视频帧格式
     HTFormatEnum format;
     switch (CVPixelBufferGetPixelFormatType(pixelBuffer)) {
@@ -114,6 +120,8 @@
     
     [[HTEffect shareInstance] processBuffer:baseAddress];
 
+    //todo --- hteffect end ---
+    
     [self.htLiveView displayPixelBuffer:pixelBuffer isMirror:isMirror];
     
     self.outputImage = [CIImage imageWithCVPixelBuffer:pixelBuffer];
@@ -295,10 +303,10 @@ static void ReleaseCVPixelBuffer(void *pixel, const void *data, size_t size)
 }
 
 - (void)dealloc {
-    //todo --- tillusory start ---
+    //todo --- hteffect start ---
     [[HTEffect shareInstance] releaseBufferRenderer];
     [[HTUIManager shareManager] destroy];
-    //todo --- tillusory end ---
+    //todo --- hteffect end ---
 }
 
 - (void)onInitFailure {

@@ -3,7 +3,7 @@
 //  TiSDKDemo
 //
 //  Created by N17 on 2021/2/23.
-//  Copyright © 2021 Tillusory Tech. All rights reserved.
+//  Copyright © 2021 Texeljoy Tech. All rights reserved.
 //
 
 #import "HTCaptureSessionManager.h"

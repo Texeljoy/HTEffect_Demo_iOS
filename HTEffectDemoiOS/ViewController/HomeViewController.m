@@ -3,7 +3,7 @@
 //  HTEffectDemoiOS
 //
 //  Created by N17 on 2022/5/6.
-//  Copyright © 2022 Tillusory Tech. All rights reserved.
+//  Copyright © 2022 Texeljoy Tech. All rights reserved.
 //
 
 #import "HomeViewController.h"
